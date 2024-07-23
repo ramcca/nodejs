@@ -1,0 +1,1 @@
+THis is a nodejs MongoDb app with ejs template engine
