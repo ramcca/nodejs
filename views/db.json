@@ -1,0 +1,44 @@
+db.project.insertMany(
+[
+    {_id:1,name:"PHP"},
+    {_id:2,name:"Java Script"},
+    {_id:3,name:"Phython"},
+    {_id:4,name:"Nodejs"},
+    {_id:5,name:"ReactJs"},
+    {_id:6,name:"NextJs"},
+    {_id:7,name:"Express"},
+    {_id:8,name:"Java"},
+    {_id:9,name:"ROR"},
+    {_id:10,name:"Dot Net"},
+    {_id:11,name:"Android"},
+    {_id:12,name:"Go Lang"},
+    {_id:13,name:"Oracle"},
+    {_id:14,name:"Mysql"},
+    {_id:15,name:"MongoDb"}
+
+]
+);
+
+
+// db.project.find();
+
+db.employee.insertMany(
+[
+    {_id:1,name:"Ram",projectId:1},
+    {_id:2,name:"Neeta",projectId:1},
+    {_id:3,name:"Navya",projectId:2},
+    {_id:4,name:"Sunil",projectId:3},
+    {_id:5,name:"Anil",projectId:4},
+    {_id:6,name:"Vanshika",projectId:5},
+    {_id:7,name:"Angur",projectId:6},
+    {_id:8,name:"Lilla",projectId:7},
+    {_id:9,name:"Ruhi",projectId:8},
+    {_id:10,name:"Soham",projectId:9},
+    {_id:11,name:"Ruchir",projectId:10},
+    {_id:12,name:"Anju",projectId:11},
+    {_id:13,name:"Dikhshu",projectId:1},
+    {_id:14,name:"Ishu",projectId:12},
+    {_id:15,name:"Radha",projectId:1}
+
+]
+);

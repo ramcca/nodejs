@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <%- include('./../head'); %>
+  <body>
+    <div class="container">
+      
+        <%- include('./../menu') %>
+
+        <div class="p-3 mb-2 bg-secondary text-white">Movie List.</div>
+        
+        <% if(error){%>
+        <div class="alert alert-danger" role="alert">
+          <%=error%>
+        </div>
+        <% } %>
+        <div class="row">
+          <div class="col">
+            <form class="row g-3" method="post">
+              <div class="col-auto">
+                <label for="movie_name" class="visually-hidden">Enter Movie Name</label>
+                
+              </div>
+              <div class="col-auto">
+                <input type="text" class="form-control" id="movie_name" placeholder="Movie Name" name="movie_name" value="<%=movie_name%>"/>
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Search</button>
+              </div>
+            </form>
+
+            <hr />
+            <form class="row g-3" method="post">
+              <input type="hidden" name="top_ratted" value="1" />
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Search Top Ratten Movie</button>
+              </div>
+            </form>
+            </div>
+        </div>
+        <table class="table">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Poster</th>
+              <th scope="col">Name</th>
+              <th scope="col">Release Date</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <% for(i=0;i<MovieData.length;i++){ %>
+              
+              <tr>
+                <td scope="col"><%=i+1 %></td>
+                <td scope="col">
+                  <img class="movie_poster" src="<%= (MovieData[i].poster_image) %>" alt="<%= MovieData[i].name %>" />
+                </td>
+                <td scope="col"><%= MovieData[i].name %></td>
+                <td scope="col"><%=MovieData[i].release_date %></td>
+                <td scope="col">Detail</td>
+              </tr>
+              <% } %>
+           
+          </tbody>
+        </table>
+    </div>
+    
+
+    <%- include('./../scripts') %>
+  </body>
+</html>
